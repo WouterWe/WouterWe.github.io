@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style>
+<center
+.cookie{
+
+
+background-image: url(https://raw.githubusercontent.com/WouterWe/WouterWe.github.io/master/achtergrond.jpg);
+border: none;
+padding: 15px 32px;
+
+</style>
+<body>
+
+
+<br>
+<br>
+<br>
+
+<button id="cookie" class="cookie"
+onclick="myFunction()">
+<br>
+<br>
+<br>
+</button><br>cookie<br>
+<button
+onclick="myUpgrade()">
+upgrade</button>
+
+<p id="naam"></p>
+
+<script>
+
+
+document.getElementById("cookie").style.left = 100 + 'px';
+
+var myscore = 0;
+var myupgrade = 1;
+var upgradeprice = 100;
+
+function myUpgrade() {
+
+if (myscore >= upgradeprice) {
+
+myscore = myscore - upgradeprice;
+myupgrade = myupgrade * 2;
+document.getElementById("naam").innerHTML =  myscore;
+upgradeprice = upgradeprice * 2;
+
+}
+}
+
+function myFunction() {
+
+myscore = myscore + myupgrade;
+document.getElementById("naam").innerHTML =  myscore;
+
+}
+
+docement.GetElementByClass("cookie")
+
+
+</script>
+</body>
+</html> 
+
+
