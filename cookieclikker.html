@@ -5,16 +5,26 @@
 .cookie{
 
 
-background-image: url(http://www.greatamericancookies.com/app/themes/greatamericancookies/library/images/home/carousel3.png);
+background-image: url("http://www.greatamericancookies.com/app/themes/greatamericancookies/library/images/home/carousel3.png");
 border: none;
-padding: 100px 120px;
-background-color:white;
+padding: 100px 115px;
+background-color:#15bac8;
 background-size: cover;
 
 }
-body{
-background-image: url()
+
+.Upgrade{
+
+
+background-image: url("https://wouterwe.github.io/factory.jpg");
+border: none;
+padding: 45px 60px;
+background-color:white;
+background-size:contain;
 }
+
+body{
+background-color:#15bac8;
 </style>
 <body>
 <center>
@@ -22,18 +32,34 @@ background-image: url()
 <br>
 <br>
 <br>
-
 <button id="cookie" class="cookie"
 onclick="myFunction()">
 <br>
 <br>
 <br>
-</button><br>cookie<br>
-<button
+</button><br>
+<p><font size="6">score:
+<p id="score">0&#127850;</p></font></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button id="Upgrade" class="Upgrade"
 onclick="myUpgrade()">
-upgrade</button>
+</button><br>Upgrade Cookie<br>
 
-<p id="naam"></p>
 
 <script>
 
@@ -50,7 +76,7 @@ if (myscore >= upgradeprice) {
 
 myscore = myscore - upgradeprice;
 myupgrade = myupgrade * 2;
-document.getElementById("naam").innerHTML =  myscore;
+document.getElementById("score").innerHTML =  myscore;
 upgradeprice = upgradeprice * 2;
 
 }
@@ -59,7 +85,7 @@ upgradeprice = upgradeprice * 2;
 function myFunction() {
 
 myscore = myscore + myupgrade;
-document.getElementById("naam").innerHTML =  myscore;
+document.getElementById("score").innerHTML = "<font size='6'>" + myscore + "&#127850;<font>";
 
 }
 
