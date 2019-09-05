@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -27,13 +28,23 @@
 
 <button onclick="berekening()">bereken</button>
 
+<a href="https://wouterwe.github.io/math"><h3>Homepage</h3></a>
+
+
+
 <head>
 
-<style>
 
+<style>
 body {
   background-image: url("https://img.etimg.com/thumb/msid-65467688,width-643,imgsize-268745,resizemode-4/mathematics.jpg");
 }
+
+
+h3 {color: white;
+  font-size: 1em;
+text-align: center;}
+
 
 </style>
 
@@ -46,29 +57,20 @@ body {
 var a;
 var b;
 var c;
-
-
 function berekening(){
 a = document.getElementById('a').value * 1;
 b = document.getElementById('b').value * 1;
 c = document.getElementById('c').value * 1;
 ad = document.getElementById('ad').value * 1;
-
-
 var plusuitkomst = (-1*b+Math.pow((Math.pow(b, 2)-4*a*c),0.5))/(2*a);
 var neguitkomst = (-1*b-Math.pow((Math.pow(b, 2)-4*a*c),0.5))/(2*a);
-
 var afgerondplusuitkomst = plusuitkomst.toFixed(ad);
 var afgerondneguitkomst = neguitkomst.toFixed(ad);
-
 alert( " x= "+ afgerondplusuitkomst+ ' of x= ' + afgerondneguitkomst);
 }
 </script>
-
-
 </center>
 </html>
-
 
 
 
