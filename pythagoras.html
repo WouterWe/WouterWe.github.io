@@ -35,84 +35,44 @@
 
 <button onclick="berekening()">bereken</button>
 
-<head>
-
-<style>
-
-body {
-  background-image: url("https://img.etimg.com/thumb/msid-65467688,width-643,imgsize-268745,resizemode-4/mathematics.jpg");
-}
-
-</style>
-
-</head>
-
+<a href="https://wouterwe.github.io/math"><h3>Homepage</h3></a> <head> <style> body { background-image: url("https://img.etimg.com/thumb/msid-65467688,width-643,imgsize-268745,resizemode-4/mathematics.jpg"); } h3 {color: white; font-size: 1em; text-align: center;} </style> </head>
 <script>
-
 function berekening(){
 a = document.getElementById('a').value * 1;
 b = document.getElementById('b').value * 1;
 c = document.getElementById('c').value * 1;
 ad = document.getElementById('ad').value * 1;
-
-
 if(a ==0 && b>0 && c>0){
-
 var uitkomsta = Math.pow(Math.pow(c, 2)-Math.pow(b, 2), 0.5)
-
 var afgeronduitkomsta = uitkomsta.toFixed(ad);
-
 alert(afgeronduitkomsta);
-
-
 }
 else{
-
 if(b ==0 && a>0 && c>0){
-
 var uitkomstb = Math.pow(Math.pow(c, 2)-Math.pow(a, 2), 0.5)
-
 var afgeronduitkomstb = uitkomstb.toFixed(ad);
-
 alert(afgeronduitkomstb);
-
 }
 else{
-
 if(c ==0 && a>0 && b>0){
-
 var uitkomstc = Math.pow(Math.pow(a, 2)+Math.pow(b, 2), 0.5)
-
 var afgeronduitkomstc = uitkomstc.toFixed(ad);
-
 alert(afgeronduitkomstc);
-
 }
-
 else{
-
 if(c + a*b==0 || a + c*b==0 || b + a*c==0){
-
 alert('voer één onbekende zijde in');
-
 }
-
 else{
-
 alert('Alle zijden zijn al bekend');
-
 }
 }
 }
 }
 }
-
-
 </script>
 
 
 </center>
 
 </html>
-
-
