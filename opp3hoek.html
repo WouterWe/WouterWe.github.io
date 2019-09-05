@@ -1,55 +1,48 @@
-
 <!DOCTYPE html>
 <html>
 
 <center>
 
-<p><H1><font color="white">ABC Formule</font></H1></p>
+<p><H1><font color="white">OPP driehoek</font></H1></p>
+
+<p><H3><font color="white">Vul de lengtes van de zijdes in</font></H3></p>
+
+<p><H4><font color="white">Zijde a</font></H4></p> 
+
+<input type='text' id = "a">
 
 <br>
 
-<p><H3><font color="white">vul de waarde voor a, b en c in</font></H3></p>
+<p><H4><font color="white">Zijde b</font></H4></p>
+
+<input type='text' id = "b">
 
 <br>
 
-<H4>
+<p><H4><font color="white">Zijde c</font></H4></p>
 
-<input style='width:15px' type='text' id = "a"><font color="white"> X&#178; + </font><input style='width:15px' type='text' id = "b"><font color="white"> X+ </font><input style='width:15px' type='text' id = "c"><font color="white"> = 0</font>
-
-</H4>
+<input type='text' id = "c">
 
 <br>
 
-<p><H3><font color="white">aantal decimalen</font></H3></p>
+<p><H4><font color="white">Aantal decimalen</font></H4></p>
+
 <input type='text' id = "ad">
 
 <br>
-<br>
 
 <button onclick="berekening()">bereken</button>
-
 <a href="https://wouterwe.github.io/math"><h3>Homepage</h3></a>
-
-
 
 <head>
 
-
 <style>
-body {
-  background-image: url("https://img.etimg.com/thumb/msid-65467688,width-643,imgsize-268745,resizemode-4/mathematics.jpg");
-}
 
+body { background-image:url("https://img.etimg.com/thumb/msid-65467688,width-643,imgsize-268745,resizemode-4/mathematics.jpg"); } h3 {color: white; font-size: 1em; text-align: center;} 
 
-h3 {color: white;
-  font-size: 1em;
-text-align: center;}
-
-
-</style>
+</style> 
 
 </head>
-
 
 
 
@@ -57,21 +50,34 @@ text-align: center;}
 var a;
 var b;
 var c;
+var ad;
+
 function berekening(){
 a = document.getElementById('a').value * 1;
 b = document.getElementById('b').value * 1;
 c = document.getElementById('c').value * 1;
 ad = document.getElementById('ad').value * 1;
-var plusuitkomst = (-1*b+Math.pow((Math.pow(b, 2)-4*a*c),0.5))/(2*a);
-var neguitkomst = (-1*b-Math.pow((Math.pow(b, 2)-4*a*c),0.5))/(2*a);
-var afgerondplusuitkomst = plusuitkomst.toFixed(ad);
-var afgerondneguitkomst = neguitkomst.toFixed(ad);
-alert( " x= "+ afgerondplusuitkomst+ ' of x= ' + afgerondneguitkomst);
+
+
+var uitkomst = (0.5*c*Math.pow((Math.pow(a,2)-Math.pow(((Math.pow(a, 2)+Math.pow(c, 2)-Math.pow(b, 2))/(2*c)), 2)),0.5));
+
+var afgeronde_uitkomst=uitkomst.toFixed(ad);
+
+if(a*b*c==0){
+
+alert('alle zijdes dienen bekend te zijn');
+
+}else if(a + b*c>0 && b + a*c>0 && c + a*b>0){
+
+alert(afgeronde_uitkomst);
+
 }
+}
+
 </script>
+
 </center>
+
 </html>
-
-
 
 
