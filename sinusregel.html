@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<center>
+
+<p><H1><font color="white">Sinusregel</font></H1></p>
+
+<p><H3><font color="white">Vul voor de onbekende 0 in.</font></H3></p>
+
+<p><H4><font color="white">Zijde A</font></H4></p> 
+
+<input type='text' id = "a">
+
+<br>
+
+<p><H4><font color="white">Zijde B</font></H4></p>
+
+<input type='text' id = "b">
+
+<br>
+
+<p><H4><font color="white">Hoek Alfa</font></H4></p>
+
+<input type='text' id = "alfa">
+
+<br>
+
+<p><H4><font color="white">Hoek Bèta</font></H4></p>
+
+<input type='text' id = "beta">
+
+<br>
+
+<p><H4><font color="white">Aantal decimalen</font></H4></p>
+
+<input type='text' id = "ad">
+
+<br>
+
+<button onclick="berekening()">bereken</button>
+
+<head>
+
+<style>
+
+body {
+  background-image: url("https://img.etimg.com/thumb/msid-65467688,width-643,imgsize-268745,resizemode-4/mathematics.jpg");
+}
+
+</style>
+
+</head>
+
+<script>
+
+var a;
+var b;
+var alfa;
+var beta;
+var convert_rad_to_deg= 57.29577952;
+var convert_deg_to_rad= Math.PI / 180;
+
+function berekening(){
+
+a = document.getElementById('a').value * 1;
+b = document.getElementById('b').value * 1;
+alfa = document.getElementById('alfa').value * 1;
+beta = document.getElementById('beta').value * 1;
+ad = document.getElementById('ad').value * 1;
+
+
+if(alfa ==0 && beta>0 && a>0 && b>0){
+
+var antwoord_alfa = (Math.asin((a/(b/Math.sin(beta * convert_deg_to_rad)))) * convert_rad_to_deg);
+
+var afgerond_antwoord_alfa = antwoord_alfa.toFixed(ad);
+
+alert(afgerond_antwoord_alfa);
+
+}
+
+else{
+
+if(beta ==0 && alfa>0 && a>0 && b>0){
+
+var antwoord_beta = (Math.asin((b/(a/Math.sin(alfa * convert_deg_to_rad)))) * convert_rad_to_deg);
+
+var afgerond_antwoord_beta = antwoord_beta.toFixed(ad);
+
+alert(afgerond_antwoord_beta);
+
+}
+
+else{
+
+if(a ==0 && alfa>0 && beta>0 && b>0){
+
+var antwoord_a = (b/Math.sin(beta * convert_deg_to_rad))*Math.sin(alfa * convert_deg_to_rad);
+
+var afgerond_antwoord_a = antwoord_a.toFixed(ad);
+
+alert(afgerond_antwoord_a);
+
+}
+
+if(b ==0 && alfa>0 && beta>0 && a>0){
+
+var antwoord_b = (a/Math.sin(alfa * convert_deg_to_rad))*Math.sin(beta * convert_deg_to_rad);
+
+var afgerond_antwoord_b = antwoord_b.toFixed(ad);
+
+alert(afgerond_antwoord_b);
+
+}
+
+else{
+
+if(alfa + a*b*beta==0 || a + alfa*b*beta==0 || b + a*alfa*beta==0 || beta + a*alfa*b==0){
+
+alert('voer één onbekende in');
+
+}
+
+else{
+
+alert('Er zijn geen onbekenden')
+
+}
+}
+}
+}
+}
+
+</script>
+
+</center>
+
+</html>
+
+
