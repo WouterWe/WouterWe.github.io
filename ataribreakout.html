@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div id= "blokje"style="
+background-color: red;
+width: 25px;
+height: 25px;
+position: absolute;
+left: 50px;
+top: 500px;
+">
+
+</div>
+
+
+<div id= "scoreblokje1"style="
+background-color: red;
+width: 50px;
+height: 25px;
+position: absolute;
+left: 100px;
+top: 100px;
+">
+
+</div>
+
+
+<div id= "launchpad"style="
+background-color: red;
+width: 100px;
+height: 25px;
+position: absolute;
+left: 350px;
+top: 500px;
+">
+
+</div>
+
+<div id= "borderboven"style="
+background-color: black;
+width: 800px;
+height: 20px;
+position: absolute;
+left: 0px;
+top: 0px;
+">
+
+</div>
+
+
+<div id= "borderrechts"style="
+background-color: black;
+width: 20px;
+height: 650px;
+position: absolute;
+left: 800px;
+top: 0px;
+">
+
+</div>
+
+
+<div id= "borderonder"style="
+background-image: url('https://media.giphy.com/media/PhIsv6b9a9Jug/giphy.gif');
+width: 800px;
+height: 70px;
+position: absolute;
+left: 0px;
+top: 580px;
+">
+
+</div>
+
+
+
+
+
+<div id= "borderlinks"style="
+background-color: black;
+width: 20px;
+height: 650px;
+position: absolute;
+left: 0px;
+top: 0px;
+">
+
+</div>
+
+</head>
+<body>
+
+
+<button type="button" style="position: absolute; left: 300px; top: 500px; width: 50px;" onclick="left()">links</button>
+
+<button type="button" style="position: absolute; left: 450px; top: 500px; width: 50px;" onclick="right()">rechts</button>
+
+
+<br>
+<br>
+
+<button type="button" style="position: absolute; left: 100px; top: 50px;" onclick="bewegen()">start</button>
+
+</body>
+
+<script>
+
+var postop= 500;
+var posleft= 50;
+var launchpadleft= 350;
+var launchpadtop= 500;
+var score= 0;
+
+
+function right(){
+
+if(launchpadleft<700){
+
+launchpadleft=launchpadleft+20;
+document.getElementById("launchpad").style.left = launchpadleft+"px";
+}
+}
+
+function left(){
+
+if(launchpadleft>20){
+launchpadleft=launchpadleft-20;
+document.getElementById("launchpad").style.left = launchpadleft+"px";
+}
+}
+
+var speedleft = 1;
+var speedtop = -1;
+
+
+
+function bewegen(){
+
+
+document.getElementById("blokje").style.top = postop+"px";
+document.getElementById("blokje").style.left = posleft+"px";
+
+postop += speedtop;
+posleft += speedleft;
+
+
+var change = launchpadleft+50-posleft;
+var gecorchange = change*-1;
+
+if (postop > 474 && posleft > launchpadleft && posleft < launchpadleft + 100 && postop < 480){
+
+speedtop = speedtop*-1;
+speedleft = (((gecorchange+50)/25)-1);
+}
+
+
+document.getElementById("blokje").style.top = postop+"px";
+document.getElementById("blokje").style.left = posleft+"px";
+
+if (postop==20){
+speedtop = speedtop*-1;
+}
+
+
+document.getElementById("blokje").style.top = postop+"px";
+document.getElementById("blokje").style.left = posleft+"px";
+
+if (posleft>780){
+speedleft = speedleft*-1;
+}
+
+
+document.getElementById("blokje").style.top = postop+"px";
+document.getElementById("blokje").style.left = posleft+"px";
+
+if (posleft<20){
+speedleft = speedleft*-1;
+}
+
+
+document.getElementById("blokje").style.top = postop+"px";
+document.getElementById("blokje").style.left = posleft+"px";
+
+setTimeout(bewegen, 10);
+
+if(postop==600){
+
+alert('gameover');
+
+document.getElementById("blokje").remove()
+
+
+}
+}
+
+</script>
+
+<script>
+
+var scoreblokje1left= 100;
+var scoreblokje1top= 100;
+var scoreblokje1hoogte= 25;
+var scoreblokje1lengte= 100;
+
+document.getElementById("scoreblokje1").style.left = scoreblokje1left+"px";
+document.getElementById("scoreblokje1").style.top = scoreblokje1top+"px";
+document.getElementById("scoreblokje1").style.height = scoreblokje1hoogte+"px";
+document.getElementById("scoreblokje1").style.width = scoreblokje1lengte+"px";
+
+run1();
+
+function run1(){
+
+if(postop==(scoreblokje1top + scoreblokje1hoogte) && scoreblokje1left<(posleft+25) && posleft<(scoreblokje1left+scoreblokje1lengte) || (postop + 25)==scoreblokje1top && scoreblokje1left<(posleft+25) && posleft<(scoreblokje1left+scoreblokje1lengte)){
+
+speedtop = speedtop*-1;
+
+document.getElementById("scoreblokje1").remove()
+
+score++;
+
+document.getElementById("score").innerHTML = score;
+}
+
+if(posleft==(scoreblokje1left+scoreblokje1lengte) && (scoreblokje1top + scoreblokje1hoogte)<postop && (postop+25)<scoreblokje1top || (posleft+25)==scoreblokje1left && (scoreblokje1top + scoreblokje1hoogte)>postop && (postop+25)>scoreblokje1top){
+
+speedtop = speedtop*-1;
+
+document.getElementById("scoreblokje1").remove()
+
+score++;
+
+document.getElementById("score").innerHTML = score;
+}
+
+setTimeout(run1, 10);
+}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
