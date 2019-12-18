@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div style= "width: 20px; height: 20px; background: red; position: absolute; left: 0px; top: 0px;" id= "blokje"></div>
+
+<div style= "width: 20px; height: 20px; background: blue; position: absolute; left: 0px; top: 0px;" id= "blokje2"></div>
+
+<div style= "width: 20px; height: 20px; background: black; position: absolute; left: 0px; top: 0px;" id= "blokje3"></div>
+
+<div style= "width: 20px; height: 20px; background: green; position: absolute; left: 0px; top: 0px;" id= "blokje4"></div>
+
+
+<button onclick="getRndInteger(0,2)">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+var xa = 0;
+var ya = 0;
+var xb = 0;
+var yb = 0;
+var xc = 0;
+var yc = 0;
+var xd = 0;
+var yd = 0;
+
+function getRndInteger(min, max) {
+ xa = Math.floor(Math.random() * (max - min)) + min;  
+ ya = Math.floor(Math.random() * (max - min)) + min;  
+ xb = Math.floor(Math.random() * (max - min)) + min;  
+ yb = Math.floor(Math.random() * (max - min)) + min;  
+ xc = Math.floor(Math.random() * (max - min)) + min;  
+ yc = Math.floor(Math.random() * (max - min)) + min;  
+ xd = Math.floor(Math.random() * (max - min)) + min;  
+ yd = Math.floor(Math.random() * (max - min)) + min;  
+  
+  
+  document.getElementById("blokje").style.left = xa*20 + "px";
+  document.getElementById("blokje").style.top = ya*20 + "px";
+  document.getElementById("blokje2").style.left = xb*20 + "px";
+  document.getElementById("blokje2").style.top = yb*20 + "px";
+  document.getElementById("blokje3").style.left = xc*20 + "px";
+  document.getElementById("blokje3").style.top = yc*20 + "px";
+  document.getElementById("blokje4").style.left = xd*20 + "px";
+  document.getElementById("blokje4").style.top = yd*20 + "px";
+
+
+if(xa == xb && ya == yb || xa == xc && ya == yc || xa == xd && ya == yd){
+
+getRndInteger(min, max)
+
+}
+
+if(xb == xa && yb == ya || xb == xc && yb == yc || xb == xd && yb == yd){
+
+getRndInteger(min, max)
+
+}
+
+if(xc == xa && yc == ya || xc == xb && yc == yb || xc == xd && yc == yd){
+
+getRndInteger(min, max)
+
+}
+
+if(xd == xa && yd == ya || xd == xb && yd == yb || xd == xc && yd == yc){
+
+getRndInteger(min, max)
+
+}
+
+}
+</script>
+
+</body>
+</html>
+
+
