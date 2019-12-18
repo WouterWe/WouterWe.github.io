@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<h2><strong>TAP THE FIST TO DESTROY THE FLEXER</strong></h2>
+
+
+<p id="levens" style="
+width: 25px;
+height: 25px;
+position: relative;
+top: 155px;
+left: -100px;
+"></p>
+
+<p id="flexstate" style="
+position: relative;
+top: 110px;
+left: 80px;
+"></p>
+
+<img src="https://vignette.wikia.nocookie.net/air-ride-adventures/images/f/f5/HP.png/revision/latest?cb=20161218010857"  style="
+width: 25px;
+height: 25px;
+position: relative;
+top: -100px;
+left: 55px;
+"></img>
+
+
+<img src="https://wouterwe.github.io/IMG_6280.jpg" id="foto" style="
+width: 200px;
+height: 200px;
+position: relative;
+top: 100px;
+"></img>
+
+
+<a id='omheen'>
+<button onclick="klik1()"  style="
+width: 50px;
+height: 50px;
+background-image: url('https://www.pngrepo.com/download/300223/hand-fist.png');
+position: relative;
+top: 120px;
+left: -125px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+</a>
+
+
+<script>
+var array = ['https://5186pierson.github.io/ezgif.com-video-to-gif.gif', 'https://wouterwe.github.io/IMG_6281.jpg' , 'https://wouterwe.github.io/IMG_6282.jpg'];
+var count = 0;
+var tel = 0;
+var hp = 100;
+
+document.getElementById("levens").innerHTML = hp;
+
+document.getElementById("flexstate").innerHTML = "current flexing state: capoeira gimmicks";
+
+
+
+function klik1(){
+tel++;
+hp = hp-1;
+if(tel == 25){ 
+tel = 0;
+klik();
+}
+document.getElementById("levens").innerHTML = hp;
+
+ }
+ 
+
+ 
+function klik(){
+document.getElementById('foto').src = array[count];
+count++;
+if (count == 1){ document.getElementById("flexstate").innerHTML = "current flexing state: MATH";
+}
+
+if (count == 2){ document.getElementById("flexstate").innerHTML = "current flexing state: Around nobody's";
+}
+
+if (count == 3){ document.getElementById("flexstate").innerHTML = "current flexing state: Talking about grades";
+}
+
+if (count == 4){
+alert("Great job! You just saved hundreds of innocent students from a painfull death by exeeding their Lucas-tax.");
+
+
+document.getElementById('omheen').href = 'https://wouterwe.github.io/VIDEO-2019-11-04-21-16-19.mp4';
+}
+}
+
+</script>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
