@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+
+<button id= "set" onclick= "getRndInteger(0,4)" style= "width: 40px; height: 20px; position: absolute; left: 500px; top: 500px;">set</button>
+
+<button onclick="klik1()" id="kaart1" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik2()" id="kaart2" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik3()" id="kaart3" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik4()" id="kaart4" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik5()" id="kaart5" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik6()" id="kaart6" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik7()" id="kaart7" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+<button onclick="klik8()" id="kaart8" style="
+width: 100px;
+height: 100px;
+background-image: url('https://wouterwe.github.io/IMG_6282.jpg');
+position: absolute;
+top: 0px;
+left:0px;
+background-size: cover;
+background-repeat: no-repeat;
+"></button>
+
+
+ <p id= scoresp1 style= "position: absolute; top:450px">score player 1: 0</p>
+ <p id= scoresp2 style= "position: absolute; top:470px">score player 2: 0</p>
+ <p id= turn style= "position: absolute; top:490px">speler 1 is aan de beurt</p>
+ 
+</body>
+
+<script>
+var xa = 0;
+var ya = 0;
+var xb = 0;
+var yb = 0;
+var xc = 0;
+var yc = 0;
+var xd = 0;
+var yd = 0;
+var xe = 0;
+var ye = 0;
+var xf = 0;
+var yf = 0;
+var xg = 0;
+var yg = 0;
+var xh = 0;
+var yh = 0;
+
+function getRndInteger(min, max) {
+ xa = Math.floor(Math.random() * (max - min)) + min;  
+ ya = Math.floor(Math.random() * (max - min)) + min;  
+ xb = Math.floor(Math.random() * (max - min)) + min;  
+ yb = Math.floor(Math.random() * (max - min)) + min;  
+ xc = Math.floor(Math.random() * (max - min)) + min;  
+ yc = Math.floor(Math.random() * (max - min)) + min;  
+ xd = Math.floor(Math.random() * (max - min)) + min;  
+ yd = Math.floor(Math.random() * (max - min)) + min; 
+ xe = Math.floor(Math.random() * (max - min)) + min;  
+ ye = Math.floor(Math.random() * (max - min)) + min;  
+ xf = Math.floor(Math.random() * (max - min)) + min;  
+ yf = Math.floor(Math.random() * (max - min)) + min;  
+ xg = Math.floor(Math.random() * (max - min)) + min;  
+ yg = Math.floor(Math.random() * (max - min)) + min;  
+ xh = Math.floor(Math.random() * (max - min)) + min;  
+ yh = Math.floor(Math.random() * (max - min)) + min;  
+  
+  
+  document.getElementById("kaart1").style.left = xa*100 + "px";
+  document.getElementById("kaart1").style.top = ya*100 + "px";
+  document.getElementById("kaart2").style.left = xb*100 + "px";
+  document.getElementById("kaart2").style.top = yb*100 + "px";
+  document.getElementById("kaart3").style.left = xc*100 + "px";
+  document.getElementById("kaart3").style.top = yc*100 + "px";
+  document.getElementById("kaart4").style.left = xd*100 + "px";
+  document.getElementById("kaart4").style.top = yd*100 + "px";
+  document.getElementById("kaart5").style.left = xe*100 + "px";
+  document.getElementById("kaart5").style.top = ye*100 + "px";
+  document.getElementById("kaart6").style.left = xf*100 + "px";
+  document.getElementById("kaart6").style.top = yf*100 + "px";
+  document.getElementById("kaart7").style.left = xg*100 + "px";
+  document.getElementById("kaart7").style.top = yg*100 + "px";
+  document.getElementById("kaart8").style.left = xh*100 + "px";
+  document.getElementById("kaart8").style.top = yh*100 + "px";
+
+
+if(xa == xb && ya == yb || xa == xc && ya == yc || xa == xd && ya == yd || xa == xe && ya == ye || xa == xf && ya == yf || xa == xg && ya == yg || xa == xh && ya == yh){
+
+getRndInteger(min, max)
+
+}
+
+if(xb == xc && yb == yc || xb == xd && yb == yd || xb == xe && yb == ye || xb == xf && yb == yf || xb == xg && yb == yg || xb == xh && yb == yh){
+
+getRndInteger(min, max)
+
+}
+
+if(xc == xd && yc == yd || xc == xe && yc == ye || xc == xf && yc == yf || xc == xg && yc == yg || xc == xh && yc == yh){
+
+getRndInteger(min, max)
+
+}
+
+if(xd == xe && yd == ye || xd == xf && yd == yf || xd == xg && yd == yg || xd == xh && yd == yh){
+
+getRndInteger(min, max)
+
+}
+
+if(xe == xf && ye == yf || xe == xg && ye == yg || xe == xh && ye == yh){
+
+getRndInteger(min, max)
+
+}
+
+if(xf == xg && yf == yg || xf == xh && yf == yh){
+
+getRndInteger(min, max)
+
+}
+
+if(xg == xh && yg == yh){
+
+getRndInteger(min, max)
+
+}
+
+}
+</script>
+
+<script>
+
+var x = 0;
+var y = 0;
+var a = 0;
+var b = 0;
+var c = 0;
+var d = 0;
+var e = 0;
+var f = 0;
+var scorep1 = 0;
+var scorep2 = 0;
+var turn = 1;
+var pog = 0;
+
+function klik1(){
+
+document.getElementById("kaart1").style.background = "red";
+x++;
+y = y*2;
+pog++;
+
+ setTimeout(function(){
+ 
+if (y*x == 2){
+pog = 0;
+
+document.getElementById("kaart1").remove()
+document.getElementById("kaart2").remove()
+
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (y*x == 0 && pog == 2){
+
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+}
+
+function klik2(){
+
+document.getElementById("kaart2").style.background = "red";
+ 
+ setTimeout(function(){
+
+y++;
+x = x*2;
+pog++;
+
+if (y*x == 2){
+pog = 0;
+document.getElementById("kaart1").remove()
+document.getElementById("kaart2").remove()
+
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (y*x == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+
+}, 1000);
+
+}
+
+
+function klik3(){
+
+document.getElementById("kaart3").style.background = "blue";
+
+a++;
+b = b*2;
+pog++;
+
+ setTimeout(function(){
+
+if (a*b == 2){
+pog = 0;
+
+document.getElementById("kaart3").remove()
+document.getElementById("kaart4").remove()
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (a*b == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+
+}
+
+
+function klik4(){
+
+document.getElementById("kaart4").style.background = "blue";
+
+
+b++;
+a = a*2;
+pog++;
+
+ setTimeout(function(){
+
+if (a*b == 2){
+pog = 0;
+
+document.getElementById("kaart3").remove()
+document.getElementById("kaart4").remove()
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (a*b == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+
+}
+
+function klik5(){
+
+document.getElementById("kaart5").style.background = "black";
+
+c++;
+d = d*2;
+pog++;
+
+ setTimeout(function(){
+
+if (c*d == 2){
+pog = 0;
+
+document.getElementById("kaart5").remove()
+document.getElementById("kaart6").remove()
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (c*d == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+
+}
+
+function klik6(){
+
+document.getElementById("kaart6").style.background = "black";
+
+d++;
+c = c*2;
+pog++;
+
+ setTimeout(function(){
+
+if (c*d == 2){
+pog = 0;
+
+document.getElementById("kaart5").remove()
+document.getElementById("kaart6").remove()
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (c*d == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+
+}
+
+
+function klik7(){
+
+document.getElementById("kaart7").style.background = "green";
+
+e++;
+f = f*2;
+pog++;
+
+ setTimeout(function(){
+
+if (e*f == 2){
+pog = 0;
+
+document.getElementById("kaart7").remove()
+document.getElementById("kaart8").remove()
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (e*f == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart7").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+
+}
+
+function klik8(){
+
+document.getElementById("kaart8").style.background = "green";
+
+f++;
+e = e*2;
+pog++;
+
+ setTimeout(function(){
+
+if (e*f == 2){
+pog = 0;
+
+document.getElementById("kaart7").remove()
+document.getElementById("kaart8").remove()
+
+if (turn == 1){
+scorep1++;
+}
+
+if (turn == -1){ 
+scorep2++;
+}
+
+}
+
+if (e*f == 0 && pog == 2){
+pog = 0;
+turn = turn*-1;
+a = 0;
+b = 0;
+x = 0;
+y = 0;
+c = 0;
+d = 0;
+e = 0;
+f = 0;
+
+
+document.getElementById("kaart1").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart2").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart3").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart4").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart5").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart6").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+document.getElementById("kaart8").style.background = "url('https://wouterwe.github.io/IMG_6282.jpg')";
+
+
+}
+if (turn == 1){
+document.getElementById("turn").innerHTML = "speler 1 is aan de beurt";
+}
+
+if (turn == -1){
+document.getElementById("turn").innerHTML = "speler 2 is aan de beurt";
+}
+document.getElementById("scoresp1").innerHTML = "score player 1: "+scorep1;
+document.getElementById("scoresp2").innerHTML = "score player 2: "+scorep2;
+
+}, 1000);
+
+
+}
+
+</script>
+</html>
+
+
+
+
+
