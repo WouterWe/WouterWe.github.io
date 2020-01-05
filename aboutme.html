@@ -91,13 +91,13 @@ li a:hover {
     left: 1%;
 }
 </style>
-<div class="circleBase type1"></div>
+</head><body><div class="circleBase type1"></div>
 
 
 
-</head>
 
-<body>
+
+
 
 
 
@@ -107,7 +107,7 @@ li a:hover {
 
 <h4>
 <p style="position: absolute;  top: 150px; left: 300px;">Hi, my name is Wouter Weijnen, I'm a 17 year old student of the ds. Pierson Colege in 's-Hertogenbosch, the Netherlands. <br> One of the classes I follow is Computer Sience. <br> In 3 years time I have completed many assignments and have gathered a lot of new skills. <br> You can find all my completed courses and my assignments on this website.
-</h4>
+</p></h4>
 
 <h4>
 <div style="position: absolute; width: 350px; height: 300px; left: 25%; top: 80%; background: rgb(127,127,255)">Completed Courses:<br><br>- Basic HTML (2017)<br><br>- Filius (2018)<br><br>- Drawing applet (simplyfied JS) (2018)<br><br>- Microsoft Acces (2018)<br><br>-Blender (2019)<br><br>- Javascript (2019) </div>
@@ -116,5 +116,25 @@ li a:hover {
 <h4>
 <div style="position: absolute; width: 350px; height: 300px; left: 60%; top: 80%; background: rgb(127,127,255)">Current Courses:<br><br>- Cisco IOT<br><br>- Object based JS</div>
 </h4>
-</body></html>
 
+<a id="cvengels">
+<button onclick="cvengels()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 25%; top: 700px;"><h2>Resume (English)</h2></button>
+</a>
+
+<a id="cvnederlands">
+<button onclick="cvnederlands()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 60%; top: 700px;"><h2>Resume (Dutch)</h2></button>
+</a>
+
+</body>
+
+<script>
+function cvengels(){
+document.getElementById('cvengels').href = 'http://wouterwe.github.io/engels%20beperkt%20info%20cv.zip';
+}
+
+function cvnederlands(){
+document.getElementById('cvnederlands').href = 'http://wouterwe.github.io/cv%20beerkt%20info.zip';
+}
+</script>
+
+</html>
