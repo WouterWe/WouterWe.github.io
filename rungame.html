@@ -87,15 +87,19 @@ var versneller = 0;
 var snelheid = 1;
 var border = 3000;
 
-function left(){
 
+window.onkeypress = function(event) {
+ 
+   if (event.keyCode == 97) {
+   
 if (poslinks > 0){
 poslinks = poslinks-20;
 document.getElementById("runner").style.left = poslinks+"px";
 }
 }
 
-function right(){
+
+   if (event.keyCode == 100) {
 
 if (poslinks < 280){
 poslinks = poslinks+20;
@@ -368,9 +372,11 @@ document.getElementById("blokje1").style.top = pos1+"px";
 
 if(pos1 > 420){
 pos1 = 0;
+
 }
 setTimeout(blok1go, 10);
 
+  
 }
 
 function blok2go(){
@@ -492,6 +498,7 @@ setTimeout(blok8go, 10);
 
 }
 
+
 function blok9go(){
 
 document.getElementById("blokje9").style.top = pos9+"px";
@@ -501,11 +508,14 @@ pos9 += speed;
 document.getElementById("blokje9").style.top = pos9+"px";
 
 if(pos9 > 420){
-pos1 = 0;
+pos9 = 0;
+
 }
+
 setTimeout(blok9go, 10);
 
 }
+
 
 function blok10go(){
 
