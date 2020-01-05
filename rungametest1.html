@@ -36,16 +36,16 @@
 
 <div id= "runner" style= "background: blue; position: absolute; top:400px; left: 140px; height: 20px; width: 20px;"></div>
 
-<button id= "linksknop" style= "position: absolute; top:440px; left: 20px; height: 20px; width: 50px;" onclick="left()">links</button>
-
-<button id= "rechtsknop" style= "position: absolute; top:440px; left: 230px; height: 20px; width: 50px;" onclick= "right()">rechts</button>
-
 <button id= "start" style= "position: absolute; top:0px; left: 320px; height: 20px; width: 50px;" onclick= "start()">start</button>
 
 <p id= "score" style= "position: absolute; left: 350px; top: 50px;" >score: 0<p>
 
 <p id= "sneller" style= "position: absolute; left: 350px; top: 70px;" >snelheid: 1X<p>
+
+<p style= "position: absolute; left: 0px; top: 700px;" >press “a” for left and “d” for right<p>
+
 </body>
+
 
 <script>
 var poslinks = 140;
@@ -98,14 +98,18 @@ document.getElementById("runner").style.left = poslinks+"px";
 }
 }
 
-function right(){
+
+window.onkeypress = function(event) {
+ 
+   if (event.keyCode == 100) {
+
 
 if (poslinks < 280){
 poslinks = poslinks+20;
 document.getElementById("runner").style.left = poslinks+"px";
 }
 }
-
+}
 
 
 
