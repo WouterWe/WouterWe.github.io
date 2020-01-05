@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div id= "bord" style= "background: green; position: absolute; top: 0px; left: 0px; height: 500px; width: 300px;"></div>
+
+<div id= "blokje1" style= "background: red; position: absolute; top: 0px; left: 0px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje2" style= "background: red; position: absolute; top: 0px; left: 20px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje3" style= "background: red; position: absolute; top: 0px; left: 40px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje4" style= "background: red; position: absolute; top: 0px; left: 60px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje5" style= "background: red; position: absolute; top: 0px; left: 80px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje6" style= "background: red; position: absolute; top: 0px; left: 100px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje7" style= "background: red; position: absolute; top: 0px; left: 120px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje8" style= "background: red; position: absolute; top: 0px; left: 140px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje9" style= "background: red; position: absolute; top: 0px; left: 160px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje10" style= "background: red; position: absolute; top: 0px; left: 180px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje11" style= "background: red; position: absolute; top: 0px; left: 200px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje12" style= "background: red; position: absolute; top: 0px; left: 220px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje13" style= "background: red; position: absolute; top: 0px; left: 240px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje14" style= "background: red; position: absolute; top: 0px; left: 260px; height: 20px; width: 20px;"></div>
+
+<div id= "blokje15" style= "background: red; position: absolute; top: 0px; left: 280px; height: 20px; width: 20px;"></div>
+
+<div id= "runner" style= "background: blue; position: absolute; top:400px; left: 140px; height: 20px; width: 20px;"></div>
+
+<button id= "linksknop" style= "position: absolute; top:440px; left: 20px; height: 20px; width: 50px;" onclick="left()">links</button>
+
+<button id= "rechtsknop" style= "position: absolute; top:440px; left: 230px; height: 20px; width: 50px;" onclick= "right()">rechts</button>
+
+<button id= "start" style= "position: absolute; top:0px; left: 320px; height: 20px; width: 50px;" onclick= "start()">start</button>
+
+<p id= "score" style= "position: absolute; left: 350px; top: 50px;" >score: 0<p>
+
+<p id= "sneller" style= "position: absolute; left: 350px; top: 70px;" >snelheid: 1X<p>
+</body>
+
+<script>
+var poslinks = 140;
+var poshoogte = 400;
+var speed = 1;
+var pos1 = 0;
+var pos2 = 0;
+var pos3 = 0;
+var pos4 = 0;
+var pos5 = 0;
+var pos6 = 0;
+var pos7 = 0;
+var pos8 = 0;
+var pos9 = 0;
+var pos10 = 0;
+var pos11 = 0;
+var pos12 = 0;
+var pos13 = 0;
+var pos14 = 0;
+var pos15  = 0;
+var posleft1 = 0;
+var posleft2 = 20;
+var posleft3 = 40;
+var posleft4 = 60;
+var posleft5 = 80;
+var posleft6 = 100;
+var posleft7 = 120;
+var posleft8 = 140;
+var posleft9 = 160;
+var posleft10 = 180;
+var posleft11 = 200;
+var posleft12 = 220;
+var posleft13 = 240;
+var posleft14 = 260;
+var posleft15 = 280;
+var score = 0;
+var punten = 1;
+var versneller = 0;
+var snelheid = 1;
+var border = 3000;
+
+window.onkeypress = function(event) {
+ 
+   if (event.keyCode == 112) {
+   
+if (poslinks > 0){
+poslinks = poslinks-20;
+document.getElementById("runner").style.left = poslinks+"px";
+}
+}
+}
+
+function right(){
+
+if (poslinks < 280){
+poslinks = poslinks+20;
+document.getElementById("runner").style.left = poslinks+"px";
+}
+}
+
+
+
+
+
+function start(){ 
+
+control()
+scorep()
+
+blok1go()
+ setTimeout(function(){
+ 
+blok2go()
+}, 2000);
+
+setTimeout(function(){
+ 
+blok3go()
+}, 4000);
+
+setTimeout(function(){
+ 
+blok4go()
+}, 6000);
+
+setTimeout(function(){
+ 
+blok5go()
+}, 8000);
+
+setTimeout(function(){
+ 
+blok6go()
+}, 10000);
+
+setTimeout(function(){
+ 
+blok7go()
+}, 12000);
+
+setTimeout(function(){
+ 
+blok8go()
+}, 14000);
+
+setTimeout(function(){
+ 
+blok9go()
+}, 16000);
+
+setTimeout(function(){
+ 
+blok10go()
+}, 18000);
+
+setTimeout(function(){
+ 
+blok11go()
+}, 20000);
+
+setTimeout(function(){
+ 
+blok12go()
+}, 22000);
+
+setTimeout(function(){
+ 
+blok13go()
+}, 24000);
+
+setTimeout(function(){
+ 
+blok14go()
+}, 26000);
+
+setTimeout(function(){
+ 
+blok15go()
+}, 28000);
+
+}
+
+function control(){
+
+if(score > border){
+versneller++;
+border = border*2;
+}
+
+if(versneller == 1){
+speed++;
+versneller = 0;
+snelheid++;
+
+document.getElementById("sneller").innerHTML = "snelheid: "+snelheid+"X";
+}
+
+if((poslinks + 20) > posleft1 && (poslinks + 20) < (posleft1 + 20) && poshoogte == (pos1 + 20) || poslinks == posleft1 && poshoogte == (pos1 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft2 && (poslinks + 20) < (posleft2 + 20) && poshoogte == (pos2 + 20) || poslinks == posleft2 && poshoogte == (pos2 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft3 && (poslinks + 20) < (posleft3 + 20) && poshoogte == (pos3 + 20) || poslinks == posleft3 && poshoogte == (pos3 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft4 && (poslinks + 20) < (posleft4 + 20) && poshoogte == (pos4 + 20) || poslinks == posleft4 && poshoogte == (pos4 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft5 && (poslinks + 20) < (posleft5 + 20) && poshoogte == (pos5 + 20) || poslinks == posleft5 && poshoogte == (pos5 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft6 && (poslinks + 20) < (posleft6 + 20) && poshoogte == (pos6 + 20) || poslinks == posleft6 && poshoogte == (pos6 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft7 && (poslinks + 20) < (posleft7 + 20) && poshoogte == (pos7 + 20) || poslinks == posleft7 && poshoogte == (pos7 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft8 && (poslinks + 20) < (posleft8 + 20) && poshoogte == (pos8 + 20) || poslinks == posleft8 && poshoogte == (pos8 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+
+}
+
+if((poslinks + 20) > posleft9 && (poslinks + 20) < (posleft9 + 20) && poshoogte == (pos9 + 20) || poslinks == posleft9 && poshoogte == (pos9 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft10 && (poslinks + 20) < (posleft10 + 20) && poshoogte == (pos10 + 20) || poslinks == posleft10 && poshoogte == (pos10 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft11 && (poslinks + 20) < (posleft11 + 20) && poshoogte == (pos11 + 20) || poslinks == posleft11 && poshoogte == (pos11 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft12 && (poslinks + 20) < (posleft12 + 20) && poshoogte == (pos12 + 20) || poslinks == posleft12 && poshoogte == (pos12 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft13 && (poslinks + 20) < (posleft13 + 20) && poshoogte == (pos13 + 20) || poslinks == posleft13 && poshoogte == (pos13 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft14 && (poslinks + 20) < (posleft14 + 20) && poshoogte == (pos14 + 20) || poslinks == posleft14 && poshoogte == (pos14 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+
+if((poslinks + 20) > posleft15 && (poslinks + 20) < (posleft15 + 20) && poshoogte == (pos15 + 20) || poslinks == posleft15 && poshoogte == (pos15 + 20)){
+
+document.getElementById("runner").remove()
+speed = 0;
+punten = 0;
+alert("game over score = "+score)
+
+}
+setTimeout(control, 10);
+
+}
+
+function scorep(){
+
+document.getElementById("score").innerHTML = "score: "+score;
+
+score += punten;
+
+document.getElementById("score").innerHTML = "score: "+score;
+
+setTimeout(scorep, 10);
+}
+
+
+
+function blok1go(){
+
+document.getElementById("blokje1").style.top = pos1+"px";
+
+pos1 += speed;
+
+document.getElementById("blokje1").style.top = pos1+"px";
+
+if(pos1 > 420){
+pos1 = 0;
+}
+setTimeout(blok1go, 10);
+
+}
+
+function blok2go(){
+
+document.getElementById("blokje2").style.top = pos2+"px";
+
+pos2 += speed;
+
+document.getElementById("blokje2").style.top = pos2+"px";
+
+if(pos2 > 420){
+pos2 = 0;
+
+}
+
+setTimeout(blok2go, 10);
+
+}
+
+function blok3go(){
+
+document.getElementById("blokje3").style.top = pos3+"px";
+
+pos3 += speed;
+
+document.getElementById("blokje3").style.top = pos3+"px";
+
+if(pos3 > 420){
+pos3 = 0;
+
+}
+
+setTimeout(blok3go, 10);
+
+}
+
+function blok4go(){
+
+document.getElementById("blokje4").style.top = pos4+"px";
+
+pos4 += speed;
+
+document.getElementById("blokje4").style.top = pos4+"px";
+
+if(pos4 > 420){
+pos4 = 0;
+
+}
+
+setTimeout(blok4go, 10);
+
+}
+
+function blok5go(){
+
+document.getElementById("blokje5").style.top = pos5+"px";
+
+pos5 += speed;
+
+document.getElementById("blokje5").style.top = pos5+"px";
+
+if(pos5 > 420){
+pos5 = 0;
+
+}
+
+setTimeout(blok5go, 10);
+
+}
+
+function blok6go(){
+
+document.getElementById("blokje6").style.top = pos6+"px";
+
+pos6 += speed;
+
+document.getElementById("blokje6").style.top = pos6+"px";
+
+if(pos6 > 420){
+pos6 = 0;
+
+}
+
+setTimeout(blok6go, 10);
+
+}
+
+function blok7go(){
+
+document.getElementById("blokje7").style.top = pos7+"px";
+
+pos7 += speed;
+
+document.getElementById("blokje7").style.top = pos7+"px";
+
+if(pos7 > 420){
+pos7 = 0;
+
+}
+
+setTimeout(blok7go, 10);
+
+}
+
+function blok8go(){
+
+document.getElementById("blokje8").style.top = pos8+"px";
+
+pos8 += speed;
+
+document.getElementById("blokje8").style.top = pos8+"px";
+
+if(pos8 > 420){
+pos8 = 0;
+
+}
+
+setTimeout(blok8go, 10);
+
+}
+
+function blok9go(){
+
+document.getElementById("blokje9").style.top = pos9+"px";
+
+pos9 += speed;
+
+document.getElementById("blokje9").style.top = pos9+"px";
+
+if(pos9 > 420){
+pos1 = 0;
+}
+setTimeout(blok9go, 10);
+
+}
+
+function blok10go(){
+
+document.getElementById("blokje10").style.top = pos10+"px";
+
+pos10 += speed;
+
+document.getElementById("blokje10").style.top = pos10+"px";
+
+if(pos10 > 420){
+pos10 = 0;
+}
+setTimeout(blok10go, 10);
+
+}
+
+function blok11go(){
+
+document.getElementById("blokje11").style.top = pos11+"px";
+
+pos11 += speed;
+
+document.getElementById("blokje11").style.top = pos11+"px";
+
+if(pos11 > 420){
+pos11 = 0;
+}
+setTimeout(blok11go, 10);
+
+}
+
+function blok12go(){
+
+document.getElementById("blokje12").style.top = pos12+"px";
+
+pos12 += speed;
+
+document.getElementById("blokje12").style.top = pos12+"px";
+
+if(pos12 > 420){
+pos12 = 0;
+}
+setTimeout(blok12go, 10);
+
+}
+
+function blok13go(){
+
+document.getElementById("blokje13").style.top = pos13+"px";
+
+pos13 += speed;
+
+document.getElementById("blokje13").style.top = pos13+"px";
+
+if(pos13 > 420){
+pos13 = 0;
+}
+setTimeout(blok13go, 10);
+
+}
+
+function blok14go(){
+
+document.getElementById("blokje14").style.top = pos14+"px";
+
+pos14 += speed;
+
+document.getElementById("blokje14").style.top = pos14+"px";
+
+if(pos14 > 420){
+pos14 = 0;
+}
+setTimeout(blok14go, 10);
+
+}
+
+function blok15go(){
+
+document.getElementById("blokje15").style.top = pos15+"px";
+
+pos15 += speed;
+
+document.getElementById("blokje15").style.top = pos15+"px";
+
+if(pos15 > 420){
+pos15 = 0;
+}
+setTimeout(blok15go, 10);
+
+}
+</script>
+
+
+</html>
+
+
+
+
+
+
