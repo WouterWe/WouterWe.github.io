@@ -1,0 +1,143 @@
+<html><head>
+
+<style>
+
+h2 {color: red;
+      font-size: 15px;}
+    h3 {color: white;
+          font-size: 20px;}
+        h4 {font-size: 20px;}
+      
+      
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+
+li a:hover {
+    color: white;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+body{
+background-image: url(https://s4827.pcdn.co/wp-content/uploads/2018/07/jeff-l-735108-unsplash-800x457.jpg);
+padding:0;
+margin:0;
+background-size: cover;
+}
+.footer{
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    position: relative;
+}
+li {
+    float: left;
+    position: relative;
+}
+
+li a {
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 1px 30px;
+    text-decoration: none;
+    position: relative;
+}
+
+    
+li a:hover {
+    color: white;
+    position: relative;
+    }
+    
+
+
+</style>
+
+<a id="rungame">
+<button onclick="rungame()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 5%; top: 75%;"><h2>Run game</h2></button>
+</a>
+
+<a id="memory">
+<button onclick="memory()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 20%; top: 75%;"><h2>Memory</h2></button>
+</a>
+
+<a id="breakout">
+<button onclick="breakout()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 35%; top: 75%;"><h2>Atari Breakout</h2></button>
+</a>
+
+
+<a id="beat">
+<button onclick="beat()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 50%; top: 75%;"><h2>Beat flexer</h2></button>
+</a>
+
+
+</head>
+
+<body>
+
+<ul>
+
+
+<li><a href="https://wouterwe.github.io/"><h4>Main page</h4></a></li>
+
+
+</ul>
+
+
+<h3>
+ <p style=" width: 90%; position: absolute; top: 30%; left: 5%;">In 2019 I have been making simple games using Javascript. <br> Most are unfinished, this is because I haven't learned how Object Based JS works yet. <br> I am going to study this later, and I will probably update the games when I know how this works. <br><br> Click the links below to try the games.<p>
+</h3>
+
+
+
+
+
+</body>
+<script>
+
+ function rungame(){
+document.getElementById('rungame').href = 'https://wouterwe.github.io/rungame.html';
+}
+
+function memory(){
+document.getElementById('memory').href = 'https://wouterwe.github.io/memory.html';
+ }
+ 
+function breakout(){
+document.getElementById('breakout').href = 'https://wouterwe.github.io/ataribreakout.html';
+ }
+ 
+function beat(){
+document.getElementById('beat').href = 'https://wouterwe.github.io/beatlucas.html';
+ }
+
+</script>
+
+
+</html>
+
