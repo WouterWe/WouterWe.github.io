@@ -87,19 +87,15 @@ var versneller = 0;
 var snelheid = 1;
 var border = 3000;
 
-window.onkeypress = function(events) {
+window.onkeypress = function(event) {
  
-   if (events.keyCode == 97) {
+   if (event.keyCode == 97) {
    
 if (poslinks > 0){
 poslinks = poslinks-20;
 document.getElementById("runner").style.left = poslinks+"px";
 }
-}
-}
-
-
-window.onkeypress = function(event) {
+   }
  
    if (event.keyCode == 100) {
 
