@@ -42,7 +42,7 @@
 
 <p id= "sneller" style= "position: absolute; left: 350px; top: 70px;" >snelheid: 1X<p>
 
-<p style= "position: absolute; left: 0px; top: 700px;" >press “a” for left and “d” for right<p>
+<p style= "position: absolute; left: 350px; top: 90px;" >press “a” for left and “d” for right<p>
 
 </body>
 
@@ -87,9 +87,9 @@ var versneller = 0;
 var snelheid = 1;
 var border = 3000;
 
-window.onkeypress = function(event) {
+window.onkeypress = function(events) {
  
-   if (event.keyCode == 97) {
+   if (events.keyCode == 97) {
    
 if (poslinks > 0){
 poslinks = poslinks-20;
