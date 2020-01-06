@@ -6,11 +6,11 @@
 h1 {color: rgb(50,200,200);
   font-size: 4em;}
   h2 {color: white;
-    font-size: 50px;}
+    font-size: 550x;}
     h3 {color: rgb(50,200,200);
       font-size: 1,1em;}
       h4 {color: white;
-        font-size: 0,9em;}
+        font-size: 20px;}
         h5 {color: white;
         font-size: 0,7em}
 
@@ -40,7 +40,7 @@ li a:hover {
 
 
 body{
-background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Stars-Nature-Landscape-Simple-Background-Image.jpg);
+background-image: url(https://cdn57.androidauthority.net/wp-content/uploads/2019/02/samsung-galaxy-s10-wallpaper-3.jpg);
 padding:0;
 margin:0;
 background-size: cover;
@@ -73,57 +73,69 @@ li a {
     position: relative;
 }
 li a:hover {
-    background-color: rgb(200,150,0);
+    background-color: rgb(32,178,180);
     position: relative;
 
 }
+.circleBase {
+    border-radius: 50%;
+}
+
+.type1 {
+    width: 250px;
+    height: 375px;
+    background: url("https://wouterwe.github.io/IMG_6226.jpg");
+    border: 2px solid black;
+    position: absolute;
+    top: 20%;
+    left: 1%;
+}
 </style>
+</head><body><div class="circleBase type1"></div>
 
 
-</head>
 
-<body>
+
+
+
+
+
 
 <ul>
-
-
-<li><a href="https://wouterwe.github.io/aboutme.html"><h4>About me</h4></a></li>
-
-<li><a href="https://wouterwe.github.io/JSgames.html"><h4>JS Games</h4></a></li>
-
-<li><a href="https://wouterwe.github.io/math.html"><h4>Math site</h4></a></li>
-
-<li><a href="https://wouterwe.github.io/firstsite.html"><h4>First (unfinished) site</h4></a></li>
-
-
-<li><a href="https://wouterwe.github.io/firstJS.html"><h4>First time JS</h4></a></li>
-
-
+<li><a href="https://wouterwe.github.io"><h4>Main page</h4></a></li>
 </ul>
 
+<h4>
+<p style="position: absolute;  top: 150px; left: 300px;">Hi, my name is Wouter Weijnen, I'm a 17 year old student of the ds. Pierson Colege in 's-Hertogenbosch, the Netherlands. <br> One of the classes I follow is Computer Sience. <br> In 3 years time I have completed many assignments and have gathered a lot of new skills. <br> You can find all my completed courses and my assignments on this website.
+</p></h4>
+
+<h4>
+<div style="position: absolute; width: 350px; height: 300px; left: 25%; top: 80%; background: rgb(127,127,255)">Completed Courses:<br><br>- Basic HTML (2017)<br><br>- Filius (2018)<br><br>- Drawing applet (simplyfied JS) (2018)<br><br>- Microsoft Acces (2018)<br><br>- Blender (2019)<br><br>- Javascript (2019) </div>
+</h4>
+
+<h4>
+<div style="position: absolute; width: 350px; height: 300px; left: 60%; top: 80%; background: rgb(127,127,255)">Current Courses:<br><br>- Cisco IOT<br><br>- Object based JS</div>
+</h4>
+
+<a id="cvengels">
+<button onclick="cvengels()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 25%; top: 850px;"><h2>Resume (English)</h2></button>
+</a>
+
+<a id="cvnederlands">
+<button onclick="cvnederlands()" style="background-color: Transparent; background-repeat:no-repeat; border: none; position: absolute; left: 60%; top: 850px;"><h2>Resume (Dutch)</h2></button>
+</a>
 
 
 
+<script>
+function cvengels(){
+document.getElementById('cvengels').href = 'http://wouterwe.github.io/engels%20beperkt%20info%20cv.zip';
+}
 
-<h1>
-<center>
-<p style=" position: absolute; top: 30%; left: 5%; ">Personality begins where comparison ends.</p>
-</center>
-</h1>
-
-<h3>
-<center>
-<p style=" position: absolute; top: 60%; left: 75%; ">~Karl Lagerfeld</p>
-</center>
-</h3>
-
-
-
-
-
-
-
-
+function cvnederlands(){
+document.getElementById('cvnederlands').href = 'http://wouterwe.github.io/cv%20beerkt%20info.zip';
+}
+</script>
 
 
 </body></html>
